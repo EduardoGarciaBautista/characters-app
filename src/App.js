@@ -1,14 +1,20 @@
-import React, {Component} from 'react';
-import './styles/App.css';
+import React, {useState} from 'react';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                Initial
-            </div>
-        );
-    }
+import Layout from "./Layout/Layout";
+
+import './styles/App.css';
+import {AppContext} from "./context/AppContext";
+
+const App = () => {
+    const [state, setState] = useState({
+        characters: [],
+        query: '',
+    });
+    return (
+        <AppContext.Provider value={{state, setState}}>
+            <Layout/>
+        </AppContext.Provider>
+    );
 }
 
 

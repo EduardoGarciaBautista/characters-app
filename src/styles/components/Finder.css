@@ -1,0 +1,25 @@
+.finder {
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finder__label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.finder__input {
+    border-radius: 30px;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-box-shadow: 5px 9px 6px 1px rgba(0,0,0,0.61);
+    box-shadow: 5px 9px 6px 1px rgba(0,0,0,0.61);
+}

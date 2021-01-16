@@ -11,6 +11,7 @@ const Detail = () => {
 
         const {character, loading} = useGetCharacter(id);
 
+
         return (
             <div className={'detail'}>
                 <Link to="/" className={'detail__button'}>

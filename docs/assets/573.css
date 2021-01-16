@@ -95,6 +95,7 @@
     width: 100%;
     overflow: hidden;
     display: block;
+    background-color: black;
 }
 
 .figure__image {
@@ -111,6 +112,8 @@
     justify-content: space-evenly;
     box-sizing: border-box;
     text-align: center;
+    -webkit-box-shadow: inset 1px 0px 12px 7px rgba(0,0,0,0.65);
+    box-shadow: inset 1px 0px 12px 7px rgba(0,0,0,0.65);
 }
 
 .body span {
@@ -128,7 +131,10 @@
     font-weight: bold;
     font-size: 2rem;
     cursor: pointer;
-    background-color: #f88f01;
+    background-color: #253341;
+    border-width: .5px !important;
+    border-color: hsla(0, 0%, 100%, .25) !important;
+    border-top: solid;
     color: white;
 }
 
@@ -142,6 +148,7 @@
     display: grid;
     margin-top: 30px;
     height: calc(100vh - 200px);
+    margin-bottom: 30px;
 }
 
 .characters__data {

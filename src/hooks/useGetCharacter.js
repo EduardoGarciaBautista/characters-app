@@ -13,6 +13,7 @@ export const useGetCharacter = (id) => {
             const founded = characters.find(character => character.id.toString() === id.toString());
             if (founded) {
                 setCharacter(founded);
+                founded.created = founded.created ? founded.created.substr(0, 10) : ''
                 setLoading(false);
             }
         }

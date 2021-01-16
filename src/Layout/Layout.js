@@ -18,7 +18,8 @@ const Layout = () => {
             setState(prevState => {
                 return {
                     ...prevState,
-                    characters: result
+                    characters: result,
+                    loading: false
                 }
             })
         })();

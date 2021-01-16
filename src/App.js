@@ -9,6 +9,7 @@ const App = () => {
     const [state, setState] = useState({
         characters: [],
         query: '',
+        loading: true
     });
     return (
         <AppContext.Provider value={{state, setState}}>

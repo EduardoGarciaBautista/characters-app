@@ -1,0 +1,61 @@
+.loader {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+}
+
+.loader__message {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 4px solid #ff4301;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotateLoader 1s infinite linear;
+}
+
+
+.spinner:after, .spinner:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    left: 100%;
+}
+
+.spinner:after {
+    right: 100%;
+}
+
+@keyframes rotateLoader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

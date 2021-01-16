@@ -5,6 +5,11 @@ body {
     max-height: 100vh;
     background-color: rgb(21, 32, 43);
 }
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
 
 input, button {
     border: none;

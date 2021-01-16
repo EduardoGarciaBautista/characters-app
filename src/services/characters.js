@@ -1,4 +1,4 @@
-import {ERROR_CHARACTERS} from "../constants/ErrorMessageConstant";
+import {ERROR_CHARACTERS} from "../constants/MessageConstant";
 
 const BASE_API_URL = 'https://rickandmortyapi.com/api/character/';
 
@@ -22,8 +22,7 @@ export const getCharacterByName = async (name) => {
         const result = await fetch(API_URL);
 
         const {results} = await result.json();
-
-        return results;
+        return results ? results : [];
     } catch (e) {
         console.log(ERROR_CHARACTERS, e)
     }

@@ -22,7 +22,7 @@ const Finder = () => {
         setState(prevPros => {
             return {
                 ...prevPros,
-                query: debounced
+                query: debounced,
             }
         });
     }, [debounced, setState]);

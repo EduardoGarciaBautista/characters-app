@@ -1,7 +1,29 @@
 .characters {
     display: grid;
+    margin-top: 30px;
+    height: calc(100vh - 200px);
+}
+
+.characters__data {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: auto;
     gap: 30px 15px;
-    margin-top: 30px;
+    height: auto;
+}
+
+
+.characters__empty {
+    height: 100px;
+    width: 80%;
+    background-color: #192734;
+    border-radius: 20px;
+    border: 2px solid #192734;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
+    justify-self: center;
 }

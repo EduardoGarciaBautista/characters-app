@@ -8,8 +8,9 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        chunkFilename: '[name].bundle.js',
+        path: path.resolve(__dirname, './dist'),
+        publicPath: 'dist/'
     },
     resolve: {
         extensions: [

@@ -31,3 +31,21 @@
     background-color: #253341;
     color: white;
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .finder__input {
+        width: 80%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .finder__label {
+        font-size: 2rem;
+    }
+    .finder__input {
+        width: 80%;
+        height: 40px;
+    }
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link, useParams} from 'react-router-dom';
 
-import '../styles/components/Detail.css';
 import {useGetCharacter} from "../hooks/useGetCharacter";
+
+import '../styles/components/Detail.css';
 
 const Detail = () => {
 

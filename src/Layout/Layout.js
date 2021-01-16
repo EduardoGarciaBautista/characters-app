@@ -1,24 +1,34 @@
-import React, {Component} from 'react';
+import React, {useEffect, useContext} from 'react';
 
-import Finder from "../components/Finder";
-import Characters from "../containers/Characters";
+import AppRoutes from "../routes/AppRoutes";
 
-import '../styles/Layout/Layout.css';
+import {getInitialCharacters} from "../services/characters";
+import {AppContext} from "../context/AppContext";
 
-class MyComponent extends Component {
-    render() {
-        return (
-            <div className={'layout'}>
-                <header className={'header'}>
-                    <Finder/>
-                </header>
-                <main className={'main'}>
-                    <Characters/>
-                </main>
-            </div>
-        );
-    }
+import '../styles/containers/Home.css';
+
+const Layout = () => {
+
+    const {setState} = useContext(AppContext);
+
+    useEffect(() => {
+        (async () => {
+            const result = await getInitialCharacters();
+
+            setState(prevState => {
+                return {
+                    ...prevState,
+                    characters: result
+                }
+            })
+        })();
+    }, []);
+
+    return (
+        <AppRoutes/>
+    );
+
 }
 
 
-export default MyComponent;
+export default Layout;

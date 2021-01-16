@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import {AppContext} from "../context/AppContext";
-import {getCharacterByName, getInitialCharacters} from "../services/characters";
+import {getCharacterByName} from "../services/characters";
 import CharacterCard from "../components/CharacterCard";
 
 import '../styles/containers/Characteres.css';
@@ -8,18 +8,6 @@ import '../styles/containers/Characteres.css';
 const Characters = () => {
     const {state: {characters, query}, setState} = useContext(AppContext);
 
-
-    useEffect(() => {
-        (async () => {
-            const result = await getInitialCharacters();
-            setState(prevState => {
-                return {
-                    ...prevState,
-                    characters: result
-                }
-            })
-        })();
-    }, []);
 
     useEffect(() => {
         (async () => {
